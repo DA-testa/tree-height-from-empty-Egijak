@@ -38,10 +38,15 @@ def main():
             print("You can't use file names with letter 'a'")
             return
        
-    
-        with open ("test/"+file) as fp:
-            n = int(fp.readline())
-            parents = list(map(int, fp.readline().split()))
+        try:
+            with open ("test/"+file) as fp:
+                n = int(fp.readline())
+                parents = list(map(int, fp.readline().split()))
+
+        except FileNotFoundError:
+            print("Inprecision in the file name")
+            return
+       
 
     
        
