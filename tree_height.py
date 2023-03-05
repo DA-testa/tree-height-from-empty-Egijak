@@ -7,16 +7,20 @@ import threading
 
 
 def compute_height(n, parents):
+    root = None
     children = [[] for _ in range(n)]
     for i, parent in enumerate(parents):
-        if parent!=-1:
+        if parent == -1:
+            root = i
+        else:
             children[parent].append(i)
 
     def get_height(node):
         if not children[node]:
             return 1
-        return 1+max(get_height(child)for child in children[node])
-    root=parents.index(-1)
+        else:
+            return 1 + max(get_height(child) for child in children[node])
+
     return get_height(root)
 
 
