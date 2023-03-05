@@ -34,15 +34,13 @@ def main():
         if "a" in file:
             print("You can't use file names with letter 'a'")
             return
-        try:
+       
     
-            with open (file) as fp:
-                n = int(fp.readline())
-                parents = list(map(int, fp.readline().split()))
+        with open (file) as fp:
+            n = int(fp.readline())
+            parents = list(map(int, fp.readline().split()))
 
-        except FileNotFoundError:
-            print("Inprecision in the file name")
-            return
+    
        
             
     if "I" in ievade:  
