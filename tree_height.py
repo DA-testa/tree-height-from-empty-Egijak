@@ -1,4 +1,3 @@
-# python3
 # Egija Kokoreviča 	221RDB288
 
 import sys
@@ -40,7 +39,7 @@ def main():
             return
        
     
-        with open (file) as fp:
+        with open ("test/"+file) as fp:
             n = int(fp.readline())
             parents = list(map(int, fp.readline().split()))
 
